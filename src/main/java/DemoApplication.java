@@ -1,5 +1,3 @@
-package com.example.demo;
-
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -14,18 +12,5 @@ public class DemoApplication {
 		SpringApplication.run(DemoApplication.class, args);
 	}
 
-	@RequestMapping("/") //Solicitud
-	String hellow(){
-		return "Hello World!";
-	}
 
-	@RequestMapping("/hola")
-	String holam(){
-		return "Hola Mundo!";
-	}
-
-	@RequestMapping("/mimedicacion") //Solicitud
-	String mimedicacion(){
-		return "Tómate las pastillas";
-	}
 }
