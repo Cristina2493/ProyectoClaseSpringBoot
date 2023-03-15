@@ -7,10 +7,10 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication //haz tu magia
 @RestController //Anotaciones para evitar escribir código.
 //Le dice a Spring que la clase contiene un controlador rest - prepárate para recibir HTTP
-public class DemoApplication {
+public class MySpringBootApplication {
 
 	public static void main(String[] args) {
-		SpringApplication.run(DemoApplication.class, args);
+		SpringApplication.run(MySpringBootApplication.class, args);
 	}
 
 
