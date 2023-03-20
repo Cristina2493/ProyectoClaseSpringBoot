@@ -34,23 +34,23 @@ class MySpringBootApplicationTests {
 	@Autowired
 	private TestRestTemplate template;
 
-	/**
-	 * Hello main.
-	 *
-	 * @throws Exception the exception
-	 */
-	@Test
+    /**
+     * Hello main.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 	void hello_main() throws Exception {
 		ResponseEntity<String> response = template.getForEntity("/", String.class);
 		assertThat(response.getBody()).isEqualTo("Main class");
 	}
 
-	/**
-	 * Hello hola.
-	 *
-	 * @throws Exception the exception
-	 */
-	@Test
+    /**
+     * Hello hola.
+     *
+     * @throws Exception the exception
+     */
+    @Test
 	void hello_hola() throws Exception {
 		ResponseEntity<String> response = template.getForEntity("/hola", String.class);
 		assertThat(response.getBody()).isEqualTo("Hola mundo!");
