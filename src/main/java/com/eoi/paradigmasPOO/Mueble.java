@@ -6,11 +6,15 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * The type Mueble.
+ * The type Mueble. La clase mueble comprende todos los objetos físicos que tiene una habitación
+ * Además todos los objetos de la clase Mueble, tienen un Arraylist de Componentes de Mueble (ComponenteDeMueble.class)
  */
 @Component
 public abstract class Mueble extends ObjetoFisico {
 
+    /**
+     * Se utiliza para guardar el nombre de la habitación en la que se encuentra el mueble
+     */
     private String habitacion;
 
     /**
@@ -66,7 +70,9 @@ public abstract class Mueble extends ObjetoFisico {
     public void setComponentes(List<ComponenteDeMueble> componentes) {
         this.componentes = componentes;
     }
-
+    /**
+     * El método showInfo muestra en pantalla la información básica de un mueble.
+     */
     @Override
     public void showInfo() {
         System.out.println("FICHA DE MUEBLE");
@@ -77,5 +83,23 @@ public abstract class Mueble extends ObjetoFisico {
             ObjetoFisico o =  n;
             o.showInfo();
         });
+    }
+
+    /**
+     * Gets habitacion.
+     *
+     * @return the habitacion
+     */
+    public String getHabitacion() {
+        return habitacion;
+    }
+
+    /**
+     * Sets habitacion.
+     *
+     * @param habitacion the habitacion
+     */
+    public void setHabitacion(String habitacion) {
+        this.habitacion = habitacion;
     }
 }
